@@ -1,0 +1,66 @@
+.trayectoria {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: rgba($color: $black, $alpha: 0.95);
+  color: $white;
+  max-height: 100vh;
+  overflow-y: auto !important;
+
+  h3 {
+    background-color: $red;
+    color: $white;
+    width: fit-content;
+    padding: 3px 20px;
+    margin-bottom: 1rem;
+  }
+
+  article {
+    margin-top: 3rem;
+
+
+
+    .accordion-item {
+      background-color: transparent;
+      color: $white;
+      border-bottom: 1px solid $red;
+
+
+      &:hover {
+        background-color: $red;
+      }
+
+
+      .accordion-button {
+        background-color: $red;
+        color: $white;
+        box-shadow: none !important;
+
+        &:hover {
+          background-color: transparent;
+        }
+
+        /*         &::after {
+          background-color: $red;
+          border-radius: 5px;
+          padding: 5px;
+        } */
+
+      }
+
+
+      .accordion-button.collapsed {
+        background-color: transparent;
+
+
+      }
+
+      .accordion-body {
+        background-color: $red;
+      }
+    }
+  }
+
+}

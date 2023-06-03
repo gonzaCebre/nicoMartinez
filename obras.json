@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "imagenes": [
+      {
+        "src": "./media/book/01.jpg",
+        "alt": "Foto Nico Martinez"
+      },
+      {
+        "src": "./media/book/02.jpg",
+        "alt": "Foto Nico Martinez"
+      },
+      {
+        "src": "./media/book/03.jpg",
+        "alt": "Foto Nico Martinez"
+      }
+    ],
+    "titulo": "Limbo",
+    "dramaturgia": "Grupo escalpelo",
+    "actores": "Luciano Quiroga Guena, Laura Gigena, Celeste Lien y Nico Martinez.",
+    "direccion": "Claudia Peralta",
+    "asistente": "Julieta Zamora",
+    "funciones": "Sala Jorge Diaz CePIA (UNC)",
+    "año": "2016"
+  },
+  {
+    "id": 2,
+    "imagenes": [
+      {
+        "src": "./media/book/04.jpg",
+        "alt": "Foto Nico Martinez"
+      },
+      {
+        "src": "./media/book/05.jpg",
+        "alt": "Foto Nico Martinez"
+      },
+      {
+        "src": "./media/book/06.jpg",
+        "alt": "Foto Nico Martinez"
+      }
+    ],
+    "titulo": "Limbo",
+    "dramaturgia": "Grupo escalpelo",
+    "actores": "Luciano Quiroga Guena, Laura Gigena, Celeste Lien y Nico Martinez.",
+    "direccion": "Claudia Peralta",
+    "asistente": "Julieta Zamora",
+    "funciones": "Sala Jorge Diaz CePIA (UNC)",
+    "año": "2016"
+  }
+]

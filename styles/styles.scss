@@ -1,0 +1,27 @@
+@import './base/colors';
+@import './base/text';
+@import './base/general';
+@import './components/buttons';
+@import './layout/index';
+@import './layout/quienSoy';
+@import './layout/reels';
+@import './layout/galeria';
+@import './layout/trayectoria';
+@import './layout/obras';
+@import './layout/book';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.no-mostrar {
+  display: none;
+}
+
+.book__fotos__foto,
+.book__fotos__foto--ampliada {
+  width: 100px;
+}
