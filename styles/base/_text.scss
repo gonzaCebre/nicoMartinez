@@ -11,6 +11,7 @@ h2,
 h3,
 h4 {
   font-family: $passion;
+  text-transform: uppercase;
 }
 
 p,
@@ -19,13 +20,14 @@ span {
   font-weight: 600;
 }
 
+
 h2 {
   width: fit-content;
   background-color: $red;
   color: $white;
   padding: 4px 15px;
   box-shadow: 5px 5px 0px 0px $black;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
 }
 
 .h2--blanco {

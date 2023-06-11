@@ -7,12 +7,62 @@
   overflow-y: auto !important;
   background-color: rgba($color: $black, $alpha: 0.95);
   color: $white;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
 
 
   h3 {
     background-color: $red;
     color: $white;
     width: fit-content;
-    padding: 3px 20px;
+    padding: 3px 5px;
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+    margin-left: 5px;
+  }
+
+  button {
+    margin: 2rem 0;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .quien-soy {
+    &__fotos {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      margin-bottom: 1.5rem;
+
+      img {
+        width: 40%;
+        box-shadow: 8px 8px 0px 0px $black;
+      }
+    }
+
+    &__texto--mobile {
+      p {
+        font-size: 1rem;
+        font-weight: lighter;
+        color: rgb(37, 37, 37);
+      }
+
+      span {
+        font-family: $poppins;
+        font-size: 1rem;
+        font-weight: bolder;
+        color: $black;
+      }
+    }
+
+    &__buttons {
+      display: flex;
+      width: 70%;
+      justify-content: space-between;
+    }
   }
 }

@@ -20,6 +20,10 @@
   position: absolute;
   top: 30px;
   right: 30px;
+  @extend .button;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .red {
@@ -39,5 +43,19 @@
 
   svg {
     width: 30px;
+  }
+}
+
+//Solo para celu
+@media only screen and (max-width: 640px) {
+  .button {
+    padding: 7px 10px;
+
+  }
+
+  .cerrar {
+    width: 2.2rem;
+    height: 2.2rem;
+    box-shadow: 1px 1px 0px 0px $red;
   }
 }

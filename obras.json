@@ -1,22 +1,27 @@
 [
   {
     "id": 1,
+    "portada": "./media/obras/obras-portadas/01.jpg",
     "imagenes": [
       {
-        "src": "./media/book/01.jpg",
-        "alt": "Foto Nico Martinez"
+        "src": "./media/obras/obras-fotos/01-limbo/limbo01.jpg",
+        "alt": "Limbo obra"
       },
       {
-        "src": "./media/book/02.jpg",
-        "alt": "Foto Nico Martinez"
+        "src": "./media/obras/obras-fotos/01-limbo/limbo02.jpg",
+        "alt": "Limbo obra"
       },
       {
-        "src": "./media/book/03.jpg",
-        "alt": "Foto Nico Martinez"
+        "src": "./media/obras/obras-fotos/01-limbo/limbo03.jpg",
+        "alt": "Limbo obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/01-limbo/limbo04.jpg",
+        "alt": "Limbo obra"
       }
     ],
     "titulo": "Limbo",
-    "dramaturgia": "Grupo escalpelo",
+    "dramaturgia": "Grupo Escalpelo.",
     "actores": "Luciano Quiroga Guena, Laura Gigena, Celeste Lien y Nico Martinez.",
     "direccion": "Claudia Peralta",
     "asistente": "Julieta Zamora",
@@ -25,26 +30,403 @@
   },
   {
     "id": 2,
+    "portada": "./media/obras/obras-portadas/02.jpg",
     "imagenes": [
       {
-        "src": "./media/book/04.jpg",
-        "alt": "Foto Nico Martinez"
+        "src": "./media/obras/obras-fotos/02-sabina/sabina01.jpg",
+        "alt": "sabina obra"
       },
       {
-        "src": "./media/book/05.jpg",
-        "alt": "Foto Nico Martinez"
+        "src": "./media/obras/obras-fotos/02-sabina/sabina02.jpg",
+        "alt": "sabina obra"
       },
       {
-        "src": "./media/book/06.jpg",
-        "alt": "Foto Nico Martinez"
+        "src": "./media/obras/obras-fotos/02-sabina/sabina03.jpg",
+        "alt": "sabina obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/02-sabina/sabina04.jpg",
+        "alt": "sabina obra"
       }
     ],
-    "titulo": "Limbo",
-    "dramaturgia": "Grupo escalpelo",
-    "actores": "Luciano Quiroga Guena, Laura Gigena, Celeste Lien y Nico Martinez.",
-    "direccion": "Claudia Peralta",
-    "asistente": "Julieta Zamora",
-    "funciones": "Sala Jorge Diaz CePIA (UNC)",
-    "año": "2016"
+    "titulo": "Sabina y Lucrecia",
+    "dramaturgia": "Alberto Adellach",
+    "actores": "Erika Janson, Marina Montedoro, Ger Dé y Nico Martinez.",
+    "direccion": "Rubén Andalor.",
+    "funciones": "Teatro Maria Castaña, Sala Azucena Carmona (Teatro Real) y Teatro La Chacarita.",
+    "año": "2017"
+  },
+  {
+    "id": 3,
+    "portada": "./media/obras/obras-portadas/03.jpg",
+    "imagenes": [
+      {
+        "src": "./media/obras/obras-fotos/03-pinocho/pinocho01.jpg",
+        "alt": "pinocho obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/03-pinocho/pinocho02.png",
+        "alt": "pinocho obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/03-pinocho/pinocho03.jpg",
+        "alt": "pinocho obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/03-pinocho/pinocho04.jpeg",
+        "alt": "pinocho obra"
+      }
+    ],
+    "titulo": "Pinocho y su amigo el grillo",
+    "dramaturgia": "Alejandro Vanegas.",
+    "actores": "Jeremias Difilippo, Patricio Hubert,  Boris Sojak, Ana Castro, Sasha Vanegas, Pilar Novillo,  Trinidad Araujo, Milagros Ponce, Vitorio Cucinelli, Jimena Leunda y Nico Martínez.",
+    "direccion": "Alejandro Vanegas.",
+    "funciones": "Teatro Ciudad de las Artes (Córdoba Capital) y gira al interior de la Provincia de Córdoba.",
+    "año": "2018"
+  },
+  {
+    "id": 4,
+    "portada": "./media/obras/obras-portadas/04.jpg",
+    "imagenes": [
+      {
+        "src": "./media/obras/obras-fotos/04-comosellama/comosellama01.jpg",
+        "alt": "comosellama obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/04-comosellama/comosellama02.jpg",
+        "alt": "comosellama obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/04-comosellama/comosellama03.jpg",
+        "alt": "comosellama obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/04-comosellama/comosellama04.jpg",
+        "alt": "comosellama obra"
+      }
+    ],
+    "titulo": "¿Y Cómo se llama la obra?",
+    "dramaturgia": "Carla Iturralde Tejón y NIco Martínez.",
+    "actores": "Sabrina Nuñez, Candela Ciraolo, Denis Molina,  Mariano Di rienzo, Carla Iturralde Tejón y NIco Martínez.",
+    "direccion": "Carla Iturralde Tejón y NIco Martínez.",
+    "iluminacion": "Emilia Bravo.",
+    "funciones": "Radio Nacional (Córdoba Capital)",
+    "año": "2018"
+  },
+  {
+    "id": 5,
+    "portada": "./media/obras/obras-portadas/05.jpg",
+    "imagenes": [
+      {
+        "src": "./media/obras/obras-fotos/05-diosa/diosa01.jpg",
+        "alt": "diosa obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/05-diosa/diosa02.jpg",
+        "alt": "diosa obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/05-diosa/diosa03.jpg",
+        "alt": "diosa obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/05-diosa/diosa04.jpg",
+        "alt": "diosa obra"
+      }
+    ],
+    "titulo": "Diosa. Una Misa en escena",
+    "dramaturgia": "Julieta Martin.",
+    "actores": "Julieta Martin y Nico Martínez.",
+    "direccion": "Julieta Martin.",
+    "asistente": "Valentina Ayen.",
+    "iluminacion": "Franco Catanzaro.",
+    "funciones": "Teatro La Calle, Ruido y Nueces (Gral.Pico)",
+    "año": "2019"
+  },
+  {
+    "id": 6,
+    "portada": "./media/obras/obras-portadas/06.jpg",
+    "imagenes": [
+      {
+        "src": "./media/obras/obras-fotos/06-molotov/molotov01.jpg",
+        "alt": "molotov obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/06-molotov/molotov02.jpg",
+        "alt": "molotov obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/06-molotov/molotov03.jpg",
+        "alt": "molotov obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/06-molotov/molotov04.jpg",
+        "alt": "molotov obra"
+      }
+    ],
+    "titulo": "Tu ternura molotov",
+    "dramaturgia": "Gustavo Ott.",
+    "actores": "Pina Gonella y Nico Martìnez.",
+    "direccion": "Karla Torres Quijada.",
+    "iluminacion": "Tamara Dominguez.",
+    "funciones": "Teatro Medida x Medida y Funez Cultura.",
+    "año": "2019 a 2021"
+  },
+  {
+    "id": 7,
+    "portada": "./media/obras/obras-portadas/07.jpg",
+    "imagenes": [
+      {
+        "src": "./media/obras/obras-fotos/07-burlesque/burlesque01.jpg",
+        "alt": "burlesque obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/07-burlesque/burlesque02.jpg",
+        "alt": "burlesque obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/07-burlesque/burlesque03.jpg",
+        "alt": "burlesque obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/07-burlesque/burlesque04.jpg",
+        "alt": "burlesque obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/07-burlesque/burlesque05.jpg",
+        "alt": "burlesque obra"
+      }
+    ],
+    "titulo": "El Club Burlesque",
+    "actores": "Elenco Club Burlesque.",
+    "direccion": "Julia Erbuzzi, Luciana Mealla y Carita Lonka.",
+    "funciones": "Espacio 75, Casona Municipal, Studio Theather, Casa Babylon, Hotel Legrand, Chill Food y giras por el interior de la Provincia de Córdoba.",
+    "año": "2019 a 2023"
+  },
+  {
+    "id": 8,
+    "portada": "./media/obras/obras-portadas/08.jpg",
+    "imagenes": [
+      {
+        "src": "./media/obras/obras-fotos/08-queer/queer01.jpg",
+        "alt": "queer obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/08-queer/queer02.jpg",
+        "alt": "queer obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/08-queer/queer03.jpg",
+        "alt": "queer obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/08-queer/queer04.jpg",
+        "alt": "queer obra"
+      }
+    ],
+    "titulo": "Queer Lear",
+    "dramaturgia": " ",
+    "actores": "Constanza Benito, Erika Janson, Isabel Fink, Jhonny Picossi, Joaquín chevez y Nico Martínez.",
+    "direccion": "Jhonny Picossi",
+    "iluminacion": "Camila Messad.",
+    "funciones": "Sala 12, Teatro Medida x Medida y Pico de tinta (Villa Marìa).",
+    "año": "2019 a 2022"
+  },
+  {
+    "id": 9,
+    "portada": "./media/obras/obras-portadas/09.jpg",
+    "imagenes": [
+      {
+        "src": "./media/obras/obras-fotos/09-fraternal/fraternal01.jpg",
+        "alt": "fraternal obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/09-fraternal/fraternal02.jpg",
+        "alt": "fraternal obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/09-fraternal/fraternal03.jpg",
+        "alt": "fraternal obra"
+      }
+    ],
+    "titulo": "Fraternal",
+    "dramaturgia": "Serrana Diaz, Laura Otaola y Juan Martín Zubiri.",
+    "actores": "Constanza Benito y Nico Martínez.",
+    "direccion": "Gustavo Maximo Luna.",
+    "funciones": "Microteatro (Còrdoba Capital)",
+    "año": "2022"
+  },
+  {
+    "id": 10,
+    "portada": "./media/obras/obras-portadas/10.jpg",
+    "imagenes": [
+      {
+        "src": "./media/obras/obras-fotos/10-BHR/BHR01.jpg",
+        "alt": "BHR obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/10-BHR/BHR02.jpg",
+        "alt": "BHR obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/10-BHR/BHR03.jpg",
+        "alt": "BHR obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/10-BHR/BHR04.jpg",
+        "alt": "BHR obra"
+      }
+    ],
+    "titulo": "BHR. Basada en Hechos Reales",
+    "dramaturgia": "Joaquín Chávez.",
+    "actores": "Constanza Benito, Patricio Gonzalo, Alexis Chavez Chesta, Ayelen Riachi, Marianela Tassi, Clara Castro, Agustin Capdevila, Milagros Bonasoni, Mateo Ibañez, Eugenia Canepa y Nico Martinez.",
+    "direccion": "Joaquín Chávez.",
+    "funciones": "Teatro María Castaña, Teatro La Brújula. (Còrdoba Capital)",
+    "año": "2022"
+  },
+  {
+    "id": 11,
+    "portada": "./media/obras/obras-portadas/11.jpg",
+    "imagenes": [
+      {
+        "src": "./media/obras/obras-fotos/11-vuelo/vuelo01.jpg",
+        "alt": "vuelo obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/11-vuelo/vuelo02.jpg",
+        "alt": "vuelo obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/11-vuelo/vuelo03.jpg",
+        "alt": "vuelo obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/11-vuelo/vuelo04.jpg",
+        "alt": "vuelo obra"
+      }
+    ],
+    "titulo": "Vuelo a la infancia",
+    "dramaturgia": "Matías Quiroga.",
+    "actores": "Iris Gomez Levrino, Jazmín Sagardoy Jaime y Nico Martinez.",
+    "direccion": "Matías Quiroga.",
+    "musica": "Sebastian Pezanno.",
+    "funciones": "Teatro Ciudad de las Artes. Teatro Espacio Máscara (Còrdoba Capital)",
+    "año": "2022 a 2023"
+  },
+  {
+    "id": 12,
+    "portada": "./media/obras/obras-portadas/12.jpg",
+    "imagenes": [
+      {
+        "src": "./media/obras/obras-fotos/12-antojo/antojo01.jpg",
+        "alt": "antojo obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/12-antojo/antojo02.jpg",
+        "alt": "antojo obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/12-antojo/antojo03.jpg",
+        "alt": "antojo obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/12-antojo/antojo04.jpg",
+        "alt": "antojo obra"
+      }
+    ],
+    "titulo": "Antojo Fatal",
+    "dramaturgia": "Constanza Benito y Nico Martinez.",
+    "actores": "Constanza Benito y Nico Martinez.",
+    "direccion": "Pina Gonella",
+    "funciones": "Microteatro (Còrdoba Capital)",
+    "año": "2022"
+  },
+  {
+    "id": 13,
+    "portada": "./media/obras/obras-portadas/13.jpg",
+    "imagenes": [
+      {
+        "src": "./media/obras/obras-fotos/13-filomena/filomena01.jpg",
+        "alt": "filomena obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/13-filomena/filomena02.jpg",
+        "alt": "filomena obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/13-filomena/filomena03.jpg",
+        "alt": "filomena obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/13-filomena/filomena04.jpg",
+        "alt": "filomena obra"
+      }
+    ],
+    "titulo": "Filomena Filomena",
+    "dramaturgia": "Joaquín Chávez.",
+    "actores": "David Farias, Patricio Gonzalo, Alexis Chavez Chesta, Benjamín Veliz y Nico Martínez.",
+    "direccion": "Joaquín Chávez.",
+    "funciones": "Teatro María Castaña (Córdoba Capital)",
+    "año": "2022"
+  },
+  {
+    "id": 14,
+    "portada": "./media/obras/obras-portadas/14.jpg",
+    "imagenes": [
+      {
+        "src": "./media/obras/obras-fotos/14-deconstruidos/deconstruidos01.jpg",
+        "alt": "deconstruidos obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/14-deconstruidos/deconstruidos02.jpg",
+        "alt": "deconstruidos obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/14-deconstruidos/deconstruidos03.jpg",
+        "alt": "deconstruidos obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/14-deconstruidos/deconstruidos04.jpg",
+        "alt": "deconstruidos obra"
+      }
+    ],
+    "titulo": "Deconstruidos",
+    "dramaturgia": "Fernando Rodil.",
+    "actores": "Ger Dé y Nico Martínez.",
+    "direccion": "Pina Gonella.",
+    "funciones": "Microteatro (Córdoba Capital)",
+    "año": "2022"
+  },
+  {
+    "id": 15,
+    "portada": "./media/obras/obras-portadas/15.jpg",
+    "imagenes": [
+      {
+        "src": "./media/obras/obras-fotos/15-artista/artista01.png",
+        "alt": "artista obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/15-artista/artista02.jpg",
+        "alt": "artista obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/15-artista/artista03.jpg",
+        "alt": "artista obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/15-artista/artista04.jpg",
+        "alt": "artista obra"
+      },
+      {
+        "src": "./media/obras/obras-fotos/15-artista/artista05.jpg",
+        "alt": "artista obra"
+      }
+    ],
+    "titulo": "El Artista",
+    "dramaturgia": "Pablo Iglesias.",
+    "actores": "Pina Gonella, Ger Dé y Nico Martínez.",
+    "direccion": "Constanza Benito.",
+    "funciones": "Microteatro (Córdoba Capital)",
+    "año": "2023"
   }
 ]

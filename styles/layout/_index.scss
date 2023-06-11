@@ -5,5 +5,62 @@
   .portfolio {
     font-family: $passion;
     color: $red;
+    margin-bottom: 0;
   }
 }
+
+//Solo para celu
+@media only screen and (max-width: 640px) {
+  h1 {
+    font-size: 3.1rem;
+  }
+
+  img {
+    width: 80%;
+  }
+
+  .portfolio {
+    font-size: 2.7rem;
+    margin-top: 1rem;
+    padding-bottom: 0;
+    height: fit-content;
+  }
+
+  ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -0.3rem;
+    margin-bottom: 1rem;
+
+    li {
+      list-style-type: none;
+      margin-right: 0.5rem;
+      font-size: 1.5rem;
+      font-family: $passion;
+      margin-top: -0.5rem;
+    }
+  }
+
+  .index__buttons {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+
+  }
+}
+
+//Tablet
+@media only screen and (min-width: 641px) {}
+
+//Notebook
+@media only screen and (min-width: 992px) {}
+
+//Compu
+@media only screen and (min-width: 1200px) {}
+
+//Monitor gigante
+@media only screen and (min-width: 1400px) {}

@@ -4,16 +4,18 @@
   flex-direction: column;
   align-items: center;
 
+  h2 {
+    box-shadow: 4px 4px 0px 0px $white;
+  }
+
   &__buttons {
     display: flex;
     justify-content: center;
 
     &__button {
-      width: 35%;
       position: relative;
       display: flex;
       justify-content: center;
-      margin-right: 5%;
       border: 4px solid $red;
       border-radius: 15px;
       overflow: hidden;
@@ -30,13 +32,11 @@
       }
 
       p {
-        width: 40%;
         position: absolute;
         bottom: 0;
         color: $white;
         background-color: $red;
         border-radius: 13px;
-        padding: 7px 30px;
         font-family: $passion;
         text-transform: uppercase;
         box-shadow: 3px 3px 0px 0px $black;
@@ -51,4 +51,68 @@
       }
     }
   }
+}
+
+.book {
+  width: 100%;
+
+  &__data-container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__data {
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h4 {
+        color: $red;
+      }
+    }
+  }
+
+  .carousel {
+    border: 4px solid $white;
+
+    &-control-prev,
+    &-control-next {
+      &-icon {
+        filter: invert(40%) sepia(100%) saturate(4981%) hue-rotate(342deg) brightness(100%) contrast(100%);
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 640px) {
+  .galeria {
+
+    &__buttons {
+      width: 100%;
+      justify-content: space-around;
+
+      &__button {
+        width: 47%;
+
+        p {
+          width: 60%;
+          padding: 2px;
+        }
+      }
+    }
+  }
+
+  .book {
+    &__data-container__data {
+      width: 43%;
+
+      p {
+        text-align: center;
+      }
+    }
+  }
+
 }

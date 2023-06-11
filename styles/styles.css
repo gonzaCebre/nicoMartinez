@@ -7,6 +7,7 @@ h2,
 h3,
 h4 {
   font-family: "Passion One", cursive;
+  text-transform: uppercase;
 }
 
 p,
@@ -22,7 +23,7 @@ h2, .h2--blanco {
   color: #FFFFFF;
   padding: 4px 15px;
   box-shadow: 5px 5px 0px 0px #000000;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
 }
 
 .h2--blanco {
@@ -34,18 +35,23 @@ body {
   position: relative;
   width: 100vw;
   overflow-x: hidden;
+  /*   display: flex;
+  flex-direction: column;
+  align-items: center; */
 }
 
-img {
+/* img {
   max-width: 80vw;
-}
-
+} */
 section {
-  padding: 4rem 0;
+  padding: 2.5rem 2rem;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.button {
+.button, .cerrar {
   text-decoration: none;
   color: #FE3232;
   background-color: #000000;
@@ -56,7 +62,7 @@ section {
   text-transform: uppercase;
   box-shadow: 3px 3px 0px 0px #FE3232;
 }
-.button:hover {
+.button:hover, .cerrar:hover {
   color: #000000;
   background-color: #FE3232;
   box-shadow: none;
@@ -66,6 +72,9 @@ section {
   position: absolute;
   top: 30px;
   right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .red {
@@ -89,6 +98,16 @@ section {
   width: 30px;
 }
 
+@media only screen and (max-width: 640px) {
+  .button, .cerrar {
+    padding: 7px 10px;
+  }
+  .cerrar {
+    width: 2.2rem;
+    height: 2.2rem;
+    box-shadow: 1px 1px 0px 0px #FE3232;
+  }
+}
 .index {
   background-color: #000000;
   color: #FFFFFF;
@@ -96,8 +115,45 @@ section {
 .index .portfolio {
   font-family: "Passion One", cursive;
   color: #FE3232;
+  margin-bottom: 0;
 }
 
+@media only screen and (max-width: 640px) {
+  h1 {
+    font-size: 3.1rem;
+  }
+  img {
+    width: 80%;
+  }
+  .portfolio {
+    font-size: 2.7rem;
+    margin-top: 1rem;
+    padding-bottom: 0;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -0.3rem;
+    margin-bottom: 1rem;
+  }
+  ul li {
+    list-style-type: none;
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+    font-family: "Passion One", cursive;
+    margin-top: -0.5rem;
+  }
+  .index__buttons {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
 .quien-soy--abierto {
   position: absolute;
   top: 0;
@@ -107,35 +163,82 @@ section {
   overflow-y: auto !important;
   background-color: rgba(0, 0, 0, 0.95);
   color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
 }
 .quien-soy--abierto h3 {
   background-color: #FE3232;
   color: #FFFFFF;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 3px 20px;
+  padding: 3px 5px;
+  font-size: 1.2rem;
+}
+.quien-soy--abierto p {
+  font-size: 0.8rem;
+  margin-left: 5px;
+}
+.quien-soy--abierto button {
+  margin: 2rem 0;
 }
 
+@media only screen and (max-width: 640px) {
+  .quien-soy__fotos {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  .quien-soy__fotos img {
+    width: 40%;
+    box-shadow: 8px 8px 0px 0px #000000;
+  }
+  .quien-soy__texto--mobile p {
+    font-size: 1rem;
+    font-weight: lighter;
+    color: rgb(37, 37, 37);
+  }
+  .quien-soy__texto--mobile span {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: bolder;
+    color: #000000;
+  }
+  .quien-soy__buttons {
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+  }
+}
 .reels {
   background-color: #FE3232;
 }
 
+@media only screen and (max-width: 640px) {
+  iframe {
+    width: 95% !important;
+    height: 185px;
+    margin-bottom: 2rem;
+  }
+}
 .galeria {
   background-color: #000000;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+.galeria h2, .galeria .h2--blanco {
+  box-shadow: 4px 4px 0px 0px #FFFFFF;
+}
 .galeria__buttons {
   display: flex;
   justify-content: center;
 }
 .galeria__buttons__button {
-  width: 35%;
   position: relative;
   display: flex;
   justify-content: center;
-  margin-right: 5%;
   border: 4px solid #FE3232;
   border-radius: 15px;
   overflow: hidden;
@@ -150,13 +253,11 @@ section {
   width: 100%;
 }
 .galeria__buttons__button p {
-  width: 40%;
   position: absolute;
   bottom: 0;
   color: #FFFFFF;
   background-color: #FE3232;
   border-radius: 13px;
-  padding: 7px 30px;
   font-family: "Passion One", cursive;
   text-transform: uppercase;
   box-shadow: 3px 3px 0px 0px #000000;
@@ -168,13 +269,56 @@ section {
   box-shadow: 3px 3px 0px 0px #FE3232;
 }
 
+.book {
+  width: 100%;
+}
+.book__data-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.book__data-container__data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.book__data-container__data h4 {
+  color: #FE3232;
+}
+.book .carousel {
+  border: 4px solid #FFFFFF;
+}
+.book .carousel-control-prev-icon, .book .carousel-control-next-icon {
+  filter: invert(40%) sepia(100%) saturate(4981%) hue-rotate(342deg) brightness(100%) contrast(100%);
+}
+
+@media only screen and (max-width: 640px) {
+  .galeria__buttons {
+    width: 100%;
+    justify-content: space-around;
+  }
+  .galeria__buttons__button {
+    width: 47%;
+  }
+  .galeria__buttons__button p {
+    width: 60%;
+    padding: 2px;
+  }
+  .book__data-container__data {
+    width: 43%;
+  }
+  .book__data-container__data p {
+    text-align: center;
+  }
+}
 .trayectoria {
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: rgba(0, 0, 0, 0.98);
   color: #FFFFFF;
   max-height: 100vh;
   overflow-y: auto !important;
@@ -190,15 +334,18 @@ section {
 .trayectoria article {
   margin-top: 3rem;
 }
-.trayectoria article .accordion-item {
+.trayectoria article .accordion {
+  width: 90vw;
+}
+.trayectoria article .accordion .accordion-item {
   background-color: transparent;
   color: #FFFFFF;
   border-bottom: 1px solid #FE3232;
 }
-.trayectoria article .accordion-item:hover {
+.trayectoria article .accordion .accordion-item:hover {
   background-color: #FE3232;
 }
-.trayectoria article .accordion-item .accordion-button {
+.trayectoria article .accordion .accordion-item .accordion-button {
   background-color: #FE3232;
   color: #FFFFFF;
   box-shadow: none !important;
@@ -208,14 +355,14 @@ section {
     padding: 5px;
   } */
 }
-.trayectoria article .accordion-item .accordion-button:hover {
+.trayectoria article .accordion .accordion-item .accordion-button:hover {
   background-color: transparent;
 }
-.trayectoria article .accordion-item .accordion-button.collapsed {
+.trayectoria article .accordion .accordion-item .accordion-button.collapsed {
   background-color: transparent;
 }
-.trayectoria article .accordion-item .accordion-body {
-  background-color: #FE3232;
+.trayectoria article .accordion .accordion-item .accordion-body {
+  background-color: transparent;
 }
 
 .obras {
@@ -230,7 +377,31 @@ section {
   overflow-y: auto !important;
 }
 .obras-container {
+  width: 90%;
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.obras-container__obra {
+  border: 2px solid #FE3232;
+  margin-bottom: 2rem;
+  position: relative;
+}
+.obras-container__obra:hover {
+  cursor: pointer;
+}
+.obras-container__obra img {
+  width: 100%;
+}
+.obras-container__obra .titulo-obra {
+  font-family: "Passion One", cursive;
+  width: 100%;
+  text-transform: uppercase;
+  background-color: #FE3232;
+  margin-bottom: -2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .obra--abierta {
@@ -244,7 +415,39 @@ section {
   max-height: 100vh;
   overflow-y: auto !important;
 }
+.obra--abierta .obra__data-container__data {
+  margin-bottom: 2rem;
+}
+.obra--abierta .obra__data-container__data h4 {
+  text-transform: uppercase;
+  font-family: "Passion One", cursive;
+  color: #FE3232;
+  text-align: center;
+  margin-bottom: 0;
+}
+.obra--abierta .obra__data-container__data p {
+  font-size: 0.9rem;
+  text-align: center;
+}
+.obra--abierta .obra__data-container__fotos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.obra--abierta .obra__data-container__fotos img {
+  width: 90%;
+  margin-bottom: 2rem;
+}
 
+@media only screen and (max-width: 640px) {
+  .obras-container__obra {
+    width: 48%;
+  }
+  .obras-container__obra .titulo-obra {
+    font-size: 0.9rem;
+    padding: 0.3rem;
+  }
+}
 .book {
   position: absolute;
   top: 0;
@@ -269,6 +472,20 @@ section {
   overflow-y: auto !important;
 }
 
+.contacto__buttons {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.contacto__buttons .contacto__button:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 640px) {
+  .contacto__button {
+    width: 20%;
+  }
+}
 * {
   margin: 0;
   padding: 0;

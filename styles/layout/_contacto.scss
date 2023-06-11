@@ -1,0 +1,17 @@
+.contacto__buttons {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+
+  .contacto__button:hover {
+    cursor: pointer;
+  }
+
+}
+
+//Solo para celu
+@media only screen and (max-width: 640px) {
+  .contacto__button {
+    width: 20%;
+  }
+}

@@ -32,7 +32,6 @@ let viewBookButton = document.getElementById("viewBookButton");
 let bookModal = document.getElementById("bookModal");
 
 viewBookButton.addEventListener("click", () => {
-  /* loadBook(); */
   bookModal.classList.remove("no-mostrar");
   window.scrollTo({
     top: 0,
@@ -40,48 +39,6 @@ viewBookButton.addEventListener("click", () => {
   });
   document.body.style.overflow = "hidden";
 });
-
-//            Cargar imagenes
-/* const loadBook = async () => {
-  console.log("load book");
-  const data = await loadBookData();
-
-  let bookFotosContainer = document.getElementById("bookFotosContainer");
-
-  data.forEach((image) => {
-    //Creando las imagenes
-    const foto = document.createElement("img");
-    foto.classList.add("book__fotos__foto");
-    foto.src = image.src;
-    foto.alt = image.alt;
-
-    //Insertando las imagenes en el contenedor
-    bookFotosContainer.appendChild(foto);
-
-    //Para abrir las imagenes
-    let fotoAbierta = document.getElementById("fotoAbierta");
-    foto.addEventListener("click", () => {
-      //Creando el elemento
-      fotoAbierta.classList.remove("no-mostrar");
-      const fotoAmpliada = document.createElement("img");
-      fotoAmpliada.classList.add("book__fotos__foto--ampliada");
-      fotoAmpliada.src = image.src;
-      fotoAmpliada.alt = image.alt;
-
-      //Boton de cierre
-      let botonCerrar = document.createElement("button");
-      botonCerrar.classList.add("cerrar");
-      botonCerrar.addEventListener("click", () => {
-        fotoAbierta.removeChild(fotoAmpliada);
-        fotoAbierta.removeChild(botonCerrar);
-        fotoAbierta.classList.add("no-mostrar");
-      });
-
-      fotoAbierta.appendChild(fotoAmpliada);
-      fotoAbierta.appendChild(botonCerrar);
-    });
-  });
-}; */
 
 //            Cerrar
 let cerrarBookModal = document.getElementById("cerrarBookModal");
@@ -125,7 +82,7 @@ const loadObras = async () => {
 
     //Creando las imagenes
     const fotoPortada = document.createElement("img");
-    fotoPortada.src = obra.imagenes[0].src;
+    fotoPortada.src = obra.portada;
     fotoPortada.alt = obra.imagenes[0].alt;
 
     //Creando el titulo
@@ -133,14 +90,9 @@ const loadObras = async () => {
     titulo.classList.add("titulo-obra");
     titulo.innerHTML = obra.titulo;
 
-    //Creando el fondo del titulo
-    const fondoTitulo = document.createElement("div");
-    fondoTitulo.classList.add("fondo-titulo");
-
     //Insertando los elementos en el contenedor
     obraPortadaContainer.appendChild(fotoPortada);
     obraPortadaContainer.appendChild(titulo);
-    obraPortadaContainer.appendChild(fondoTitulo);
 
     //Para abrir las obras
     let obraAbierta = document.getElementById("obraAbierta");
@@ -150,102 +102,127 @@ const loadObras = async () => {
       obraAbierta.classList.remove("no-mostrar");
 
       //Creando el titulo
-      const tituloObra = document.createElement("h3");
-      tituloObra.classList.add("titulo-obra");
+      const tituloObra = document.createElement("h2");
+      /* tituloObra.classList.add("titulo-obra"); */
       tituloObra.innerHTML = obra.titulo;
 
       //Creando el contenedor
-      const bookDataContainer = document.createElement("div");
-      bookDataContainer.classList.add("book__data-container");
+      const obraDataContainer = document.createElement("div");
+      obraDataContainer.classList.add("obra__data-container");
 
       //Creando el contenedor de textos
-      const bookDataContainerData = document.createElement("div");
-      bookDataContainerData.classList.add("book__data-container__data");
-      bookDataContainer.appendChild(bookDataContainerData);
+      const obraDataContainerData = document.createElement("div");
+      obraDataContainerData.classList.add("obra__data-container__data");
+      obraDataContainer.appendChild(obraDataContainerData);
 
       //Dramaturgia
-      const dramaturgiaTitulo = document.createElement("h4");
-      dramaturgiaTitulo.innerHTML = "Dramaturgia: ";
-      bookDataContainerData.appendChild(dramaturgiaTitulo);
+      if (obra.dramaturgia) {
+        const dramaturgiaTitulo = document.createElement("h4");
+        dramaturgiaTitulo.innerHTML = "Dramaturgia: ";
+        obraDataContainerData.appendChild(dramaturgiaTitulo);
 
-      const dramaturgiaTexto = document.createElement("p");
-      dramaturgiaTexto.innerHTML = obra.dramaturgia;
-      bookDataContainerData.appendChild(dramaturgiaTexto);
+        const dramaturgiaTexto = document.createElement("p");
+        dramaturgiaTexto.innerHTML = obra.dramaturgia;
+        obraDataContainerData.appendChild(dramaturgiaTexto);
+      }
 
       //En escena
       const actoresTitulo = document.createElement("h4");
       actoresTitulo.innerHTML = "En escena: ";
-      bookDataContainerData.appendChild(actoresTitulo);
+      obraDataContainerData.appendChild(actoresTitulo);
 
       const actoresTexto = document.createElement("p");
       actoresTexto.innerHTML = obra.actores;
-      bookDataContainerData.appendChild(actoresTexto);
+      obraDataContainerData.appendChild(actoresTexto);
 
       //Dirección
       const direccionTitulo = document.createElement("h4");
       direccionTitulo.innerHTML = "Dirección: ";
-      bookDataContainerData.appendChild(direccionTitulo);
+      obraDataContainerData.appendChild(direccionTitulo);
 
       const direccionTexto = document.createElement("p");
       direccionTexto.innerHTML = obra.direccion;
-      bookDataContainerData.appendChild(direccionTexto);
+      obraDataContainerData.appendChild(direccionTexto);
 
-      //Asistencia de Dirección
-      const asistenteTitulo = document.createElement("h4");
-      asistenteTitulo.innerHTML = "Asistencia de dirección: ";
-      bookDataContainerData.appendChild(asistenteTitulo);
+      if (obra.asistente) {
+        //Asistencia de Dirección
+        const asistenteTitulo = document.createElement("h4");
+        asistenteTitulo.innerHTML = "Asistencia de dirección: ";
+        obraDataContainerData.appendChild(asistenteTitulo);
 
-      const asistenteTexto = document.createElement("p");
-      asistenteTexto.innerHTML = obra.asistente;
-      bookDataContainerData.appendChild(asistenteTexto);
+        const asistenteTexto = document.createElement("p");
+        asistenteTexto.innerHTML = obra.asistente;
+        obraDataContainerData.appendChild(asistenteTexto);
+      }
+
+      if (obra.iluminacion) {
+        //Asistencia de Dirección
+        const iluminacionTitulo = document.createElement("h4");
+        iluminacionTitulo.innerHTML = "Iluminación: ";
+        obraDataContainerData.appendChild(iluminacionTitulo);
+
+        const iluminacionTexto = document.createElement("p");
+        iluminacionTexto.innerHTML = obra.iluminacion;
+        obraDataContainerData.appendChild(iluminacionTexto);
+      }
+      if (obra.musica) {
+        //Asistencia de Dirección
+        const musicaTitulo = document.createElement("h4");
+        musicaTitulo.innerHTML = "Composición musical: ";
+        obraDataContainerData.appendChild(musicaTitulo);
+
+        const musicaTexto = document.createElement("p");
+        musicaTexto.innerHTML = obra.musica;
+        obraDataContainerData.appendChild(musicaTexto);
+      }
 
       //Funciones en
       const funcionesTitulo = document.createElement("h4");
       funcionesTitulo.innerHTML = "Funciones en: ";
-      bookDataContainerData.appendChild(funcionesTitulo);
+      obraDataContainerData.appendChild(funcionesTitulo);
 
       const funcionesTexto = document.createElement("p");
       funcionesTexto.innerHTML = obra.funciones;
-      bookDataContainerData.appendChild(funcionesTexto);
+      obraDataContainerData.appendChild(funcionesTexto);
 
       //Año
       const añoTitulo = document.createElement("h4");
       añoTitulo.innerHTML = "Año:";
-      bookDataContainerData.appendChild(añoTitulo);
+      obraDataContainerData.appendChild(añoTitulo);
 
       const añoTexto = document.createElement("p");
       añoTexto.innerHTML = obra.año;
-      bookDataContainerData.appendChild(añoTexto);
+      obraDataContainerData.appendChild(añoTexto);
 
       //Fotos
       let imagenes = obra.imagenes;
 
       //Creando el contenedor de textos
-      const bookDataContainerFotos = document.createElement("div");
-      bookDataContainerFotos.classList.add("book__data-container__fotos");
-      bookDataContainer.appendChild(bookDataContainerFotos);
+      const obraDataContainerFotos = document.createElement("div");
+      obraDataContainerFotos.classList.add("obra__data-container__fotos");
+      obraDataContainer.appendChild(obraDataContainerFotos);
 
       imagenes.forEach((imagen) => {
         const foto = document.createElement("img");
-        foto.classList.add("book__fotos__foto--ampliada");
         foto.src = imagen.src;
         foto.alt = imagen.alt;
 
-        bookDataContainer.appendChild(foto);
+        obraDataContainerFotos.appendChild(foto);
       });
 
       //Boton de cierre
       let botonCerrar = document.createElement("button");
       botonCerrar.classList.add("cerrar");
+      botonCerrar.innerHTML = "X";
       botonCerrar.addEventListener("click", () => {
-        obraAbierta.removeChild(bookDataContainer);
+        obraAbierta.removeChild(obraDataContainer);
         obraAbierta.removeChild(tituloObra);
         obraAbierta.removeChild(botonCerrar);
         obraAbierta.classList.add("no-mostrar");
       });
 
       obraAbierta.appendChild(tituloObra);
-      obraAbierta.appendChild(bookDataContainer);
+      obraAbierta.appendChild(obraDataContainer);
       obraAbierta.appendChild(botonCerrar);
     });
   });
@@ -287,6 +264,20 @@ cerrarTrayectoriaModal.addEventListener("click", () => {
     inline: "nearest",
   });
   document.body.style.overflow = "auto";
+});
+
+//  TRAYECTORIA 2
+//            ABRIR
+let viewTrayectoriaButton2 = document.getElementById("viewTrayectoriaButton2");
+
+viewTrayectoriaButton2.addEventListener("click", () => {
+  trayectoriaModal.classList.remove("no-mostrar");
+  quienSoyModal.classList.add("no-mostrar");
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+  document.body.style.overflow = "hidden";
 });
 
 //  QUIEN SOY

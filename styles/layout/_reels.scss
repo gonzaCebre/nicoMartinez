@@ -1,3 +1,14 @@
 .reels {
   background-color: $red;
+
+
+}
+
+//Solo para celu
+@media only screen and (max-width: 640px) {
+  iframe {
+    width: 95% !important;
+    height: 185px;
+    margin-bottom: 2rem;
+  }
 }
