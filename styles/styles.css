@@ -31,6 +31,19 @@ h2, .h2--blanco {
   color: #FE3232;
 }
 
+@media only screen and (max-width: 640px) {
+  h2, .h2--blanco {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (min-width: 641px) {
+  h2, .h2--blanco {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 2.1rem;
+  }
+}
 body {
   position: relative;
   width: 100vw;
@@ -117,6 +130,19 @@ section {
   color: #FE3232;
   margin-bottom: 0;
 }
+.index ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.index ul li {
+  list-style-type: none;
+  font-family: "Passion One", cursive;
+}
+.index .index__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
 @media only screen and (max-width: 640px) {
   h1 {
@@ -134,24 +160,46 @@ section {
   }
   ul {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     margin-top: -0.3rem;
     margin-bottom: 1rem;
   }
   ul li {
-    list-style-type: none;
     margin-right: 0.5rem;
     font-size: 1.5rem;
-    font-family: "Passion One", cursive;
     margin-top: -0.5rem;
   }
   .index__buttons {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 641px) {
+  h1 {
+    font-size: 3.3rem;
+  }
+  img {
+    width: 70%;
+  }
+  .portfolio {
+    font-size: 3.3rem;
+    margin-top: 1rem;
+    padding-bottom: 0;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  ul {
+    width: 100%;
+    justify-content: center;
+    margin-top: -0.3rem;
+    margin-bottom: 1rem;
+  }
+  ul li {
+    margin-right: 0.5rem;
+    font-size: 1.8rem;
+    margin-top: -0.5rem;
+  }
+  .index__buttons {
+    width: 70%;
   }
 }
 .quien-soy--abierto {
@@ -167,7 +215,10 @@ section {
   flex-direction: column;
   align-content: center;
 }
-.quien-soy--abierto h3 {
+.quien-soy--abierto article {
+  margin-bottom: 1.6rem;
+}
+.quien-soy--abierto article h3 {
   background-color: #FE3232;
   color: #FFFFFF;
   width: -moz-fit-content;
@@ -175,7 +226,7 @@ section {
   padding: 3px 5px;
   font-size: 1.2rem;
 }
-.quien-soy--abierto p {
+.quien-soy--abierto article p {
   font-size: 0.8rem;
   margin-left: 5px;
 }
@@ -183,32 +234,67 @@ section {
   margin: 2rem 0;
 }
 
+.quien-soy__fotos {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.quien-soy__fotos img {
+  width: 40%;
+  box-shadow: 8px 8px 0px 0px #000000;
+}
+.quien-soy__texto--mobile {
+  font-weight: 400;
+  color: rgb(37, 37, 37);
+}
+.quien-soy__texto--mobile span {
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  color: #000000;
+}
+.quien-soy__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
 @media only screen and (max-width: 640px) {
   .quien-soy__fotos {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
     margin-bottom: 1.5rem;
   }
-  .quien-soy__fotos img {
-    width: 40%;
-    box-shadow: 8px 8px 0px 0px #000000;
-  }
-  .quien-soy__texto--mobile p {
+  .quien-soy__texto--mobile {
     font-size: 1rem;
-    font-weight: lighter;
-    color: rgb(37, 37, 37);
   }
   .quien-soy__texto--mobile span {
-    font-family: "Poppins", sans-serif;
     font-size: 1rem;
-    font-weight: bolder;
-    color: #000000;
   }
   .quien-soy__buttons {
-    display: flex;
     width: 70%;
-    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 641px) {
+  .quien-soy__fotos {
+    margin-bottom: 2rem;
+  }
+  .quien-soy__texto--mobile {
+    width: 85%;
+    font-size: 1.3rem;
+  }
+  .quien-soy__texto--mobile span {
+    font-size: 1.3rem;
+  }
+  .quien-soy__buttons {
+    width: 50%;
+  }
+  .quien-soy--abierto h3 {
+    padding: 5px 8px;
+    font-size: 1.5rem;
+  }
+  .quien-soy--abierto p {
+    font-size: 1rem;
+    margin-left: 8px;
+  }
+  .quien-soy--abierto button {
+    margin: 2rem 0;
   }
 }
 .reels {
@@ -312,6 +398,32 @@ section {
     text-align: center;
   }
 }
+@media only screen and (min-width: 641px) {
+  .galeria__buttons {
+    width: 90%;
+    justify-content: space-around;
+  }
+  .galeria__buttons__button {
+    width: 45%;
+  }
+  .galeria__buttons__button p {
+    width: 60%;
+    padding: 2px;
+    font-size: 1.5rem;
+  }
+  .book__data-container__data {
+    width: 27%;
+  }
+  .book__data-container__data p {
+    text-align: center;
+  }
+  .book .carousel {
+    width: 80%;
+  }
+  .book .carousel-control-prev-icon, .book .carousel-control-next-icon {
+    filter: invert(40%) sepia(100%) saturate(4981%) hue-rotate(342deg) brightness(100%) contrast(100%);
+  }
+}
 .trayectoria {
   position: absolute;
   top: 0;
@@ -349,11 +461,6 @@ section {
   background-color: #FE3232;
   color: #FFFFFF;
   box-shadow: none !important;
-  /*         &::after {
-    background-color: $red;
-    border-radius: 5px;
-    padding: 5px;
-  } */
 }
 .trayectoria article .accordion .accordion-item .accordion-button:hover {
   background-color: transparent;
@@ -365,6 +472,14 @@ section {
   background-color: transparent;
 }
 
+@media only screen and (min-width: 641px) {
+  .accordion-item .accordion-header button {
+    font-size: 1.2rem;
+  }
+  .accordion-item .accordion-body {
+    font-size: 1.1rem;
+  }
+}
 .obras {
   position: absolute;
   top: 0;
@@ -446,6 +561,26 @@ section {
   .obras-container__obra .titulo-obra {
     font-size: 0.9rem;
     padding: 0.3rem;
+  }
+}
+@media only screen and (min-width: 641px) {
+  .obras-container__obra {
+    width: 48%;
+    border: 4px solid #FE3232;
+  }
+  .obras-container__obra .titulo-obra {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+  .obra--abierta .obra__data-container__data h4 {
+    font-size: 1.6rem;
+  }
+  .obra--abierta .obra__data-container__data p {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .obra--abierta .obra__data-container__fotos img {
+    width: 90%;
   }
 }
 .book {

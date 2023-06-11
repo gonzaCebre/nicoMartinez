@@ -40,15 +40,11 @@
           color: $white;
           box-shadow: none !important;
 
+
           &:hover {
             background-color: transparent;
           }
 
-          /*         &::after {
-            background-color: $red;
-            border-radius: 5px;
-            padding: 5px;
-          } */
 
         }
 
@@ -71,4 +67,16 @@
 }
 
 
-@media only screen and (max-width: 640px) {}
+@media only screen and (min-width: 641px) {
+  .accordion-item {
+    .accordion-header {
+      button {
+        font-size: 1.2rem;
+      }
+    }
+
+    .accordion-body {
+      font-size: 1.1rem;
+    }
+  }
+}

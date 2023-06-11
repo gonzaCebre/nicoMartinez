@@ -35,3 +35,19 @@ h2 {
   background-color: $white;
   color: $red;
 }
+
+@media only screen and (max-width: 640px) {
+  h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 2.1rem;
+  }
+}

@@ -116,3 +116,45 @@
   }
 
 }
+
+@media only screen and (min-width: 641px) {
+  .galeria {
+
+    &__buttons {
+      width: 90%;
+      justify-content: space-around;
+
+      &__button {
+        width: 45%;
+
+        p {
+          width: 60%;
+          padding: 2px;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .book {
+    &__data-container__data {
+      width: 27%;
+
+      p {
+        text-align: center;
+      }
+    }
+
+    .carousel {
+      width: 80%;
+
+      &-control-prev,
+      &-control-next {
+        &-icon {
+          filter: invert(40%) sepia(100%) saturate(4981%) hue-rotate(342deg) brightness(100%) contrast(100%);
+        }
+      }
+    }
+  }
+
+}

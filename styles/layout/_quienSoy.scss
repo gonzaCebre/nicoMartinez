@@ -12,57 +12,112 @@
   align-content: center;
 
 
-  h3 {
-    background-color: $red;
-    color: $white;
-    width: fit-content;
-    padding: 3px 5px;
-    font-size: 1.2rem;
+  article {
+    margin-bottom: 1.6rem;
+
+    h3 {
+      background-color: $red;
+      color: $white;
+      width: fit-content;
+      padding: 3px 5px;
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+      margin-left: 5px;
+    }
   }
 
-  p {
-    font-size: 0.8rem;
-    margin-left: 5px;
-  }
 
   button {
     margin: 2rem 0;
   }
 }
 
+.quien-soy {
+  &__fotos {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    img {
+      width: 40%;
+      box-shadow: 8px 8px 0px 0px $black;
+    }
+  }
+
+  &__texto--mobile {
+    font-weight: 400;
+    color: rgb(37, 37, 37);
+
+    span {
+      font-family: $poppins;
+      font-weight: bolder;
+      color: $black;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 @media only screen and (max-width: 640px) {
   .quien-soy {
     &__fotos {
-      display: flex;
-      justify-content: space-around;
-      width: 100%;
       margin-bottom: 1.5rem;
-
-      img {
-        width: 40%;
-        box-shadow: 8px 8px 0px 0px $black;
-      }
     }
 
     &__texto--mobile {
-      p {
-        font-size: 1rem;
-        font-weight: lighter;
-        color: rgb(37, 37, 37);
-      }
+      font-size: 1rem;
 
       span {
-        font-family: $poppins;
         font-size: 1rem;
-        font-weight: bolder;
-        color: $black;
       }
     }
 
     &__buttons {
-      display: flex;
       width: 70%;
-      justify-content: space-between;
+    }
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .quien-soy {
+    &__fotos {
+      margin-bottom: 2rem;
+    }
+
+    &__texto--mobile {
+      width: 85%;
+      font-size: 1.3rem;
+
+      span {
+        font-size: 1.3rem;
+      }
+    }
+
+    &__buttons {
+      width: 50%;
+    }
+  }
+
+  .quien-soy--abierto {
+
+    h3 {
+      padding: 5px 8px;
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-left: 8px;
+    }
+
+    button {
+      margin: 2rem 0;
     }
   }
 }
