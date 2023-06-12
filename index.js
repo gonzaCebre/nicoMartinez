@@ -280,6 +280,20 @@ viewTrayectoriaButton2.addEventListener("click", () => {
   document.body.style.overflow = "hidden";
 });
 
+//  TRAYECTORIA 3 DESKTOP
+//            ABRIR
+let viewTrayectoriaButton3 = document.getElementById("viewTrayectoriaButton3");
+
+viewTrayectoriaButton3.addEventListener("click", () => {
+  trayectoriaModal.classList.remove("no-mostrar");
+  quienSoyModal.classList.add("no-mostrar");
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+  document.body.style.overflow = "hidden";
+});
+
 //  QUIEN SOY
 //            ABRIR
 let viewQuienSoyButton = document.getElementById("viewQuienSoyButton");
@@ -347,3 +361,28 @@ contactButtons.forEach(function (button) {
     });
   });
 });
+
+// Para deshabilitar el boton de retroceso
+window.addEventListener("load", function () {
+  window.location.hash = "no-back-button";
+  window.location.hash = "Again-No-back-button"; //chrome
+  window.onhashchange = function () {
+    window.location.hash = "no-back-button";
+  };
+});
+
+window.onbeforeunload = function () {
+  return "Cierra la ventana desde el boton de 'cerrar'";
+};
+
+if (screen.width > 991) {
+  console.log("Es notebook");
+  const quienSoyMobile = document.getElementById("quienSoy");
+  const quienSoyDesktop = document.getElementById("quienSoyDesktop");
+  const contacto = document.getElementById("contacto");
+  const contactoDesktop = document.getElementById("contactoDesktop");
+  quienSoyMobile.classList.add("no-mostrar");
+  quienSoyDesktop.classList.remove("no-mostrar");
+  contacto.classList.add("no-mostrar");
+  contactoDesktop.classList.remove("no-mostrar");
+}

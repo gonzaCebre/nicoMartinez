@@ -64,6 +64,18 @@ section {
   align-items: center;
 }
 
+footer {
+  font-size: 0.9rem;
+  color: rgb(41, 41, 41);
+  margin: auto;
+  text-align: center;
+  margin: 2rem 0;
+}
+footer span {
+  font-size: 0.9rem;
+  color: rgb(41, 41, 41);
+}
+
 .button, .cerrar {
   text-decoration: none;
   color: #FE3232;
@@ -618,6 +630,14 @@ section {
 
 @media only screen and (max-width: 640px) {
   .contacto__button {
+    width: 20%;
+  }
+}
+@media only screen and (min-width: 641px) {
+  .contacto__buttons {
+    width: 60%;
+  }
+  .contacto__buttons .contacto__button {
     width: 20%;
   }
 }
