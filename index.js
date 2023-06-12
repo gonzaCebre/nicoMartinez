@@ -294,7 +294,7 @@ viewTrayectoriaButton3.addEventListener("click", () => {
   document.body.style.overflow = "hidden";
 });
 
-//  QUIEN SOY
+/* //  QUIEN SOY
 //            ABRIR
 let viewQuienSoyButton = document.getElementById("viewQuienSoyButton");
 let quienSoyModal = document.getElementById("quienSoyModal");
@@ -318,7 +318,7 @@ cerrarQuienSoyModal.addEventListener("click", () => {
     inline: "nearest",
   });
   document.body.style.overflow = "auto";
-});
+}); */
 
 //CONTACTO  CONTACTO  CONTACTO  CONTACTO
 
@@ -363,24 +363,76 @@ contactButtons.forEach(function (button) {
 });
 
 // Para deshabilitar el boton de retroceso
-window.addEventListener("load", function () {
+/* window.addEventListener("load", function () {
   window.location.hash = "no-back-button";
   window.location.hash = "Again-No-back-button"; //chrome
   window.onhashchange = function () {
     window.location.hash = "no-back-button";
   };
 });
-
-window.onbeforeunload = function () {
+ */
+/* window.onbeforeunload = function () {
   return "Cierra la ventana desde el boton de 'cerrar'";
-};
+}; */
 
+//  QUIEN SOY
+//            ABRIR
+let viewQuienSoyButton = document.getElementById("viewQuienSoyButton");
+let quienSoyModal = document.getElementById("quienSoyModal");
+//            Cerrar
+let cerrarQuienSoyModal = document.getElementById("cerrarQuienSoyModal");
+
+// Función para bloquear el botón de retroceso
+function bloquearBotonRetroceso() {
+  history.pushState(null, null, location.href);
+  window.onpopstate = function (event) {
+    history.go(1);
+  };
+}
+
+// Función para desbloquear el botón de retroceso
+function desbloquearBotonRetroceso() {
+  window.onpopstate = null;
+}
+
+// Abrir el modal y bloquear el botón de retroceso
+viewQuienSoyButton.addEventListener("click", () => {
+  quienSoyModal.classList.remove("no-mostrar");
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+  document.body.style.overflow = "hidden";
+  bloquearBotonRetroceso();
+});
+
+// Cerrar el modal y desbloquear el botón de retroceso
+cerrarQuienSoyModal.addEventListener("click", () => {
+  quienSoyModal.classList.add("no-mostrar");
+  viewQuienSoyButton.scrollIntoView({
+    behavior: "smooth",
+    block: "end",
+    inline: "nearest",
+  });
+  document.body.style.overflow = "auto";
+  desbloquearBotonRetroceso();
+});
+
+//  DETECTAR PANTALLAS
+const quienSoyMobile = document.getElementById("quienSoy");
+const quienSoyDesktop = document.getElementById("quienSoyDesktop");
+const contacto = document.getElementById("contacto");
+const contactoDesktop = document.getElementById("contactoDesktop");
+
+if (screen.width < 992) {
+  console.log("Es celu");
+  quienSoyMobile.classList.remove("no-mostrar");
+  quienSoyDesktop.classList.add("no-mostrar");
+  contacto.classList.remove("no-mostrar");
+  contactoDesktop.classList.add("no-mostrar");
+}
 if (screen.width > 991) {
   console.log("Es notebook");
-  const quienSoyMobile = document.getElementById("quienSoy");
-  const quienSoyDesktop = document.getElementById("quienSoyDesktop");
-  const contacto = document.getElementById("contacto");
-  const contactoDesktop = document.getElementById("contactoDesktop");
   quienSoyMobile.classList.add("no-mostrar");
   quienSoyDesktop.classList.remove("no-mostrar");
   contacto.classList.add("no-mostrar");
