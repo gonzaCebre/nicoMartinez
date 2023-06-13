@@ -391,9 +391,6 @@ footer a span {
     align-items: center;
     width: 100%;
   }
-  .quien-soy--desktop h2, .quien-soy--desktop .h2--blanco {
-    margin-left: -65vw;
-  }
   .quien-soy--desktop__bloque {
     width: 90%;
     max-width: 1200px;
