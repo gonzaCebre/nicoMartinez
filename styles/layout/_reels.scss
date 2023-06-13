@@ -5,10 +5,19 @@
 }
 
 //Solo para celu
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 991px) {
   iframe {
-    width: 95% !important;
+    width: 95%;
     height: 185px;
+    margin-bottom: 2rem;
+  }
+}
+
+//Solo para celu
+@media only screen and (min-width: 992px) {
+  iframe {
+    width: 85%;
+    height: 600px;
     margin-bottom: 2rem;
   }
 }

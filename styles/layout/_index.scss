@@ -96,7 +96,65 @@
 }
 
 //Notebook
-@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 992px) {
+  .index--desktop {
+    background-color: $black;
+    color: $white;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    padding: 4rem 6rem;
+
+    img {
+      width: 30%;
+      max-width: 300px;
+      margin-right: 3rem;
+      border: 6px solid $red;
+    }
+
+    &__textos {
+
+      .portfolio {
+        font-family: $passion;
+        color: $red;
+        margin-top: -20px;
+        font-size: 5.625rem;
+        height: fit-content;
+        margin-bottom: -40px;
+      }
+
+      h1 {
+        font-size: 6rem;
+      }
+
+      ul {
+        display: flex;
+        justify-content: flex-start;
+        padding: 0;
+        margin-top: -20px;
+
+        li {
+          list-style-type: none;
+          font-family: $passion;
+          font-size: 1.6rem;
+        }
+      }
+
+      .index__buttons {
+        width: 90%;
+        max-width: 550px;
+        display: flex;
+        justify-content: space-between;
+
+        a {
+          padding: 10px 23px;
+        }
+      }
+    }
+  }
+
+}
 
 //Compu
 @media only screen and (min-width: 1300px) {}

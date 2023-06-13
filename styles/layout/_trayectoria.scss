@@ -80,3 +80,29 @@
     }
   }
 }
+
+@media only screen and (min-width: 992px) {
+  .trayectoria {
+
+    article {
+
+      .accordion {
+
+        .accordion-item {
+          .accordion-header {
+            button {
+              font-size: 1.4rem;
+            }
+          }
+
+          .accordion-body {
+            font-size: 1.3rem;
+          }
+        }
+      }
+
+
+    }
+  }
+
+}

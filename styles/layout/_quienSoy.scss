@@ -121,3 +121,59 @@
     }
   }
 }
+
+@media only screen and (min-width: 992px) {
+  .quien-soy--desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    h2 {
+      margin-left: -65vw;
+    }
+
+    &__bloque {
+      width: 90%;
+      max-width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.2rem;
+
+      &__textos {
+        width: 70%;
+
+        article {
+          width: 100%;
+          margin-bottom: 1rem;
+
+          h3 {
+            background-color: $red;
+            color: $white;
+            width: fit-content;
+            padding: 3px 5px;
+            font-size: 1.6rem;
+          }
+
+          p {
+            width: 100%;
+            font-size: 1.1rem;
+            margin-left: 8px;
+            margin-bottom: 0;
+
+          }
+        }
+      }
+
+      img {
+        width: 25%;
+        max-width: 257px;
+      }
+    }
+
+    button {
+      margin-top: 1.3rem;
+    }
+  }
+}

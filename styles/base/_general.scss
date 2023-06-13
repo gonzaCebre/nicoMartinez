@@ -26,8 +26,20 @@ footer {
   text-align: center;
   margin: 2rem 0;
 
-  span {
-    font-size: 0.9rem;
-    color: rgb(41, 41, 41);
+  a {
+    text-decoration: none;
+
+    span {
+      font-size: 0.9rem;
+      color: rgb(41, 41, 41);
+    }
+  }
+
+
+}
+
+@media only screen and (min-width: 992px) {
+  section {
+    padding-bottom: 3.5rem;
   }
 }

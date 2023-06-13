@@ -143,3 +143,57 @@
   }
 
 }
+
+@media only screen and (min-width: 992px) {
+  .obras-container {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    &__obra {
+      width: 23%;
+      border: 4px solid $red;
+      margin-right: 1rem;
+
+      .titulo-obra {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+      }
+    }
+  }
+
+  .obra--abierta {
+    .obra__data-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &__data {
+
+        h4 {
+          font-size: 1.8rem;
+        }
+
+        p {
+          font-size: 1.3rem;
+          text-align: center;
+        }
+
+      }
+
+      &__fotos {
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+
+        img {
+          width: 48%;
+          border: 4px solid $white;
+        }
+      }
+    }
+  }
+
+}

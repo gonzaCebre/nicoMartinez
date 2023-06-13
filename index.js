@@ -24,24 +24,46 @@ const loadObrasData = async () => {
   }
 };
 
+// Función para bloquear el botón de retroceso
+function bloquearBotonRetroceso() {
+  history.pushState(null, null, location.href);
+  window.onpopstate = function (event) {
+    history.go(1);
+  };
+}
+
+// Función para desbloquear el botón de retroceso
+function desbloquearBotonRetroceso() {
+  window.onpopstate = null;
+}
+
 //  BOOK
 
 //            Abrir
 
 let viewBookButton = document.getElementById("viewBookButton");
 let bookModal = document.getElementById("bookModal");
+let bookModal2 = document.getElementById("bookModal2");
 
 viewBookButton.addEventListener("click", () => {
-  bookModal.classList.remove("no-mostrar");
+  if (screen.width < 992) {
+    bookModal.classList.remove("no-mostrar");
+  }
+  if (screen.width > 991) {
+    bookModal2.classList.remove("no-mostrar");
+  }
   window.scrollTo({
     top: 0,
     behavior: "smooth",
   });
   document.body.style.overflow = "hidden";
+  bloquearBotonRetroceso();
 });
 
 //            Cerrar
 let cerrarBookModal = document.getElementById("cerrarBookModal");
+let cerrarBookModal2 = document.getElementById("cerrarBookModal2");
+
 cerrarBookModal.addEventListener("click", () => {
   bookModal.classList.add("no-mostrar");
   viewBookButton.scrollIntoView({
@@ -50,6 +72,17 @@ cerrarBookModal.addEventListener("click", () => {
     inline: "nearest",
   });
   document.body.style.overflow = "auto";
+  desbloquearBotonRetroceso();
+});
+cerrarBookModal2.addEventListener("click", () => {
+  bookModal2.classList.add("no-mostrar");
+  viewBookButton.scrollIntoView({
+    behavior: "smooth",
+    block: "end",
+    inline: "nearest",
+  });
+  document.body.style.overflow = "auto";
+  desbloquearBotonRetroceso();
 });
 
 //  OBRAS
@@ -65,6 +98,7 @@ viewObrasButton.addEventListener("click", () => {
     behavior: "smooth",
   });
   document.body.style.overflow = "hidden";
+  bloquearBotonRetroceso();
 });
 
 //            Cargar imagenes
@@ -238,6 +272,7 @@ cerrarObrasModal.addEventListener("click", () => {
     inline: "nearest",
   });
   document.body.style.overflow = "auto";
+  desbloquearBotonRetroceso();
 });
 
 //  TRAYECTORIA
@@ -252,6 +287,7 @@ viewTrayectoriaButton.addEventListener("click", () => {
     behavior: "smooth",
   });
   document.body.style.overflow = "hidden";
+  bloquearBotonRetroceso();
 });
 
 //            Cerrar
@@ -264,6 +300,7 @@ cerrarTrayectoriaModal.addEventListener("click", () => {
     inline: "nearest",
   });
   document.body.style.overflow = "auto";
+  desbloquearBotonRetroceso();
 });
 
 //  TRAYECTORIA 2
@@ -278,6 +315,7 @@ viewTrayectoriaButton2.addEventListener("click", () => {
     behavior: "smooth",
   });
   document.body.style.overflow = "hidden";
+  bloquearBotonRetroceso();
 });
 
 //  TRAYECTORIA 3 DESKTOP
@@ -292,9 +330,10 @@ viewTrayectoriaButton3.addEventListener("click", () => {
     behavior: "smooth",
   });
   document.body.style.overflow = "hidden";
+  bloquearBotonRetroceso();
 });
 
-/* //  QUIEN SOY
+//  QUIEN SOY
 //            ABRIR
 let viewQuienSoyButton = document.getElementById("viewQuienSoyButton");
 let quienSoyModal = document.getElementById("quienSoyModal");
@@ -306,6 +345,7 @@ viewQuienSoyButton.addEventListener("click", () => {
     behavior: "smooth",
   });
   document.body.style.overflow = "hidden";
+  bloquearBotonRetroceso();
 });
 
 //            Cerrar
@@ -318,7 +358,8 @@ cerrarQuienSoyModal.addEventListener("click", () => {
     inline: "nearest",
   });
   document.body.style.overflow = "auto";
-}); */
+  desbloquearBotonRetroceso();
+});
 
 //CONTACTO  CONTACTO  CONTACTO  CONTACTO
 
@@ -362,50 +403,6 @@ contactButtons.forEach(function (button) {
   });
 });
 
-// Para deshabilitar el boton de retroceso
-/* window.addEventListener("load", function () {
-  window.location.hash = "no-back-button";
-  window.location.hash = "Again-No-back-button"; //chrome
-  window.onhashchange = function () {
-    window.location.hash = "no-back-button";
-  };
-});
- */
-/* window.onbeforeunload = function () {
-  return "Cierra la ventana desde el boton de 'cerrar'";
-}; */
-
-//  QUIEN SOY
-//            ABRIR
-let viewQuienSoyButton = document.getElementById("viewQuienSoyButton");
-let quienSoyModal = document.getElementById("quienSoyModal");
-//            Cerrar
-let cerrarQuienSoyModal = document.getElementById("cerrarQuienSoyModal");
-
-// Función para bloquear el botón de retroceso
-function bloquearBotonRetroceso() {
-  history.pushState(null, null, location.href);
-  window.onpopstate = function (event) {
-    history.go(1);
-  };
-}
-
-// Función para desbloquear el botón de retroceso
-function desbloquearBotonRetroceso() {
-  window.onpopstate = null;
-}
-
-// Abrir el modal y bloquear el botón de retroceso
-viewQuienSoyButton.addEventListener("click", () => {
-  quienSoyModal.classList.remove("no-mostrar");
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-  document.body.style.overflow = "hidden";
-  bloquearBotonRetroceso();
-});
-
 // Cerrar el modal y desbloquear el botón de retroceso
 cerrarQuienSoyModal.addEventListener("click", () => {
   quienSoyModal.classList.add("no-mostrar");
@@ -423,6 +420,8 @@ const quienSoyMobile = document.getElementById("quienSoy");
 const quienSoyDesktop = document.getElementById("quienSoyDesktop");
 const contacto = document.getElementById("contacto");
 const contactoDesktop = document.getElementById("contactoDesktop");
+const indexMobile = document.getElementById("index");
+const indexDesktop = document.getElementById("indexDesktop");
 
 if (screen.width < 992) {
   console.log("Es celu");
@@ -430,6 +429,8 @@ if (screen.width < 992) {
   quienSoyDesktop.classList.add("no-mostrar");
   contacto.classList.remove("no-mostrar");
   contactoDesktop.classList.add("no-mostrar");
+  indexMobile.classList.remove("no-mostrar");
+  indexDesktop.classList.add("no-mostrar");
 }
 if (screen.width > 991) {
   console.log("Es notebook");
@@ -437,4 +438,6 @@ if (screen.width > 991) {
   quienSoyDesktop.classList.remove("no-mostrar");
   contacto.classList.add("no-mostrar");
   contactoDesktop.classList.remove("no-mostrar");
+  indexMobile.classList.add("no-mostrar");
+  indexDesktop.classList.remove("no-mostrar");
 }

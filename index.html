@@ -34,6 +34,31 @@
         <a href="#contacto" class="button">Contacto</a>
       </div>
     </section>
+    <section class="index--desktop" id="index--desktop">
+      <img
+        src="./media/portadas/foto-index--desktop.jpg"
+        alt="Foto Nico Martinez"
+      />
+      <div class="index--desktop__textos">
+        <p class="portfolio">PORTFOLIO</p>
+        <h1>NICO MARTINEZ</h1>
+        <ul>
+          <li>Actor</li>
+          <li>●</li>
+          <li>Performer</li>
+          <li>●</li>
+          <li>Cantante</li>
+          <li>●</li>
+          <li>Docente de teatro</li>
+        </ul>
+        <div class="index__buttons">
+          <a href="#quienSoy" class="button">¿Quién soy?</a>
+          <a href="#reels" class="button">Reels</a>
+          <a href="#galeria" class="button">Galeria</a>
+          <a href="#contacto" class="button">Contacto</a>
+        </div>
+      </div>
+    </section>
     <section class="quien-soy" id="quienSoy">
       <h2>QUIÉN SOY</h2>
       <div class="quien-soy__fotos">
@@ -67,9 +92,9 @@
     </section>
     <section class="quien-soy--desktop no-mostrar" id="quienSoyDesktop">
       <h2>QUIÉN SOY</h2>
-      <div>
+      <div class="quien-soy--desktop__bloque">
         <img src="./media/book-fotos/01.jpg" alt="Book Nico Martinez" />
-        <div>
+        <div class="quien-soy--desktop__bloque__textos">
           <article>
             <h3>Mi nombre es Nicolás Martínez</h3>
             <p>
@@ -93,26 +118,29 @@
           </article>
         </div>
       </div>
-      <div>
-        <article>
-          <h3>Mi formación</h3>
-          <p>
-            En el año 2018 me recibí en la Facultad de Artes de la Universidad
-            Nacional de Córdoba (Argentina) obteniendo el título de Licenciado
-            en Teatro. Ese mismo año me titulé en la Especialización Actoral del
-            Seminario Jolie  Libois (Teatro Real. Agencia Córdoba Cultura). 
-            Desde mis inicios me incliné por el trabajo actoral desde el humor,
-            el teatro físico, el teatro de improvisación y el musical,
-            formándome en diferentes técnicas de actuación, dirección y
-            dramaturgia. Cursé talleres y seminarios complementarios, entre
-            otros con: Francisco "Paco" Giménez, Guillermo "Willy" Ianni,
-            Eugenia Hadandoniou, Soledad González, Guillermo Vanadia, Marcelo
-            Arbach, Cipriano Arguello Pitt, Carlos Mega y José Luis Valenzuela.
-            Como considero que el oficio es algo que se actualiza y muta con el
-            correr de los años y la experiencia, siempre me encuentro abierto a
-            nuevas experiencias de formación. 
-          </p>
-        </article>
+      <div class="quien-soy--desktop__bloque">
+        <div class="quien-soy--desktop__bloque__textos">
+          <article>
+            <h3>Mi formación</h3>
+            <p>
+              En el año 2018 me recibí en la Facultad de Artes de la Universidad
+              Nacional de Córdoba (Argentina) obteniendo el título de Licenciado
+              en Teatro. Ese mismo año me titulé en la Especialización Actoral
+              del Seminario Jolie  Libois (Teatro Real. Agencia Córdoba
+              Cultura).  Desde mis inicios me incliné por el trabajo actoral
+              desde el humor, el teatro físico, el teatro de improvisación y el
+              musical, formándome en diferentes técnicas de actuación, dirección
+              y dramaturgia. Cursé talleres y seminarios complementarios, entre
+              otros con: Francisco "Paco" Giménez, Guillermo "Willy" Ianni,
+              Eugenia Hadandoniou, Soledad González, Guillermo Vanadia, Marcelo
+              Arbach, Cipriano Arguello Pitt, Carlos Mega y José Luis
+              Valenzuela. Como considero que el oficio es algo que se actualiza
+              y muta con el correr de los años y la experiencia, siempre me
+              encuentro abierto a nuevas experiencias de formación. 
+            </p>
+          </article>
+        </div>
+
         <img src="./media/book-fotos/10.jpg" alt="Obras Nico Martinez" />
       </div>
 
@@ -356,26 +384,26 @@
     </section>
     <section class="contacto--desktop no-mostrar" id="contactoDesktop">
       <h2>CONTACTO</h2>
-      <div>
+      <div class="contacto--desktop__texto">
         Comunicate conmigo si te interesó mi perfil y tenés alguna propuesta
         artística, o la creamos juntos. ¡Saludos!
       </div>
 
       <div class="contacto--desktop__buttons">
-        <a href="" target="_blank" class="contacto__button whatsapp--desktop"
-          >Hablame por
+        <a href="" target="_blank" class="contacto__button whatsapp--desktop">
+          <p>Hablame por</p>
           <img src="./media/logos/whatsapp-logo-blanco.png" alt="" />
         </a>
-        <a href="" class="contacto__button instagram--desktop"
-          >Seguime en
+        <a href="" class="contacto__button instagram--desktop">
+          <p>Seguime en</p>
           <img src="./media/logos/ig-logo-blanco.png" alt="" />
         </a>
         <a href="" class="contacto__button gmail--desktop">
-          Mandame un
+          <p>Mandame un</p>
           <img src="./media/logos/email-blanco.png" alt="" />
         </a>
-        <a href="" class="contacto__button youtube--desktop"
-          >Seguime en
+        <a href="" class="contacto__button youtube--desktop">
+          <p>Seguime en</p>
           <img src="./media/logos/youtube-blanco.png" alt="" />
         </a>
       </div>
@@ -1643,6 +1671,184 @@
       <!-- <div class="book__fotos" id="bookFotosContainer"></div> -->
       <button id="cargarBook" class="no-mostrar">Cargar más</button>
     </section>
+    <section class="galeria--abierta book no-mostrar" id="bookModal2">
+      <button class="cerrar" id="cerrarBookModal2">X</button>
+      <h2>BOOK</h2>
+      <div class="book__data-container">
+        <div class="book__data-container__data">
+          <h4>Altura:</h4>
+          <p>180cm</p>
+        </div>
+        <div class="book__data-container__data">
+          <h4>Remera:</h4>
+          <p>Talle L</p>
+        </div>
+        <div class="book__data-container__data">
+          <h4>Pantalón:</h4>
+          <p>Talle 44</p>
+        </div>
+        <div class="book__data-container__data">
+          <h4>Calzado:</h4>
+          <p>Talle 42</p>
+        </div>
+        <div class="book__data-container__data">
+          <h4>Ojos:</h4>
+          <p>Marrones</p>
+        </div>
+        <div class="book__data-container__data">
+          <h4>Pelo:</h4>
+          <p>Castaño oscuro</p>
+        </div>
+      </div>
+      <div
+        id="carouselExampleAutoplaying2"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col">
+                <img
+                  src="./media/book-fotos/01.jpg"
+                  class="d-block w-100"
+                  alt="Nico Martinez - actor"
+                />
+              </div>
+              <div class="col">
+                <img
+                  src="./media/book-fotos/02.jpg"
+                  class="d-block w-100"
+                  alt="Nico Martinez - actor"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col">
+                <img
+                  src="./media/book-fotos/03.jpg"
+                  class="d-block w-100"
+                  alt="Nico Martinez - actor"
+                />
+              </div>
+              <div class="col">
+                <img
+                  src="./media/book-fotos/04.jpg"
+                  class="d-block w-100"
+                  alt="Nico Martinez - actor"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col">
+                <img
+                  src="./media/book-fotos/05.jpg"
+                  class="d-block w-100"
+                  alt="Nico Martinez - actor"
+                />
+              </div>
+              <div class="col">
+                <img
+                  src="./media/book-fotos/06.jpg"
+                  class="d-block w-100"
+                  alt="Nico Martinez - actor"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col">
+                <img
+                  src="./media/book-fotos/07.jpg"
+                  class="d-block w-100"
+                  alt="Nico Martinez - actor"
+                />
+              </div>
+              <div class="col">
+                <img
+                  src="./media/book-fotos/08.jpg"
+                  class="d-block w-100"
+                  alt="Nico Martinez - actor"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col">
+                <img
+                  src="./media/book-fotos/09.jpg"
+                  class="d-block w-100"
+                  alt="Nico Martinez - actor"
+                />
+              </div>
+              <div class="col">
+                <img
+                  src="./media/book-fotos/10.jpg"
+                  class="d-block w-100"
+                  alt="Nico Martinez - actor"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col">
+                <img
+                  src="./media/book-fotos/11.jpg"
+                  class="d-block w-100"
+                  alt="Nico Martinez - actor"
+                />
+              </div>
+              <div class="col">
+                <img
+                  src="./media/book-fotos/12.jpg"
+                  class="d-block w-100"
+                  alt="Nico Martinez - actor"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col">
+                <img
+                  src="./media/book-fotos/13.jpg"
+                  class="d-block w-100"
+                  alt="Nico Martinez - actor"
+                />
+              </div>
+              <div class="col"></div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying2"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying2"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- <div class="book__fotos" id="bookFotosContainer"></div> -->
+      <button id="cargarBook" class="no-mostrar">Cargar más</button>
+    </section>
     <!--     <section class="foto--abierta no-mostrar" id="fotoAbierta"></section>
  -->
     <section class="obras no-mostrar" id="obrasModal">
@@ -1667,7 +1873,9 @@
     </a> -->
 
     <footer>
-      Sitio web diseñado y desarrollado por <span>Gonzalo Cebrero</span>.
+      Sitio web diseñado y desarrollado por
+      <a href="https://gonzacebre.com.ar/"><span>Gonzalo Cebrero</span></a
+      >.
     </footer>
 
     <!--            SCRIPT              SCRIPT          SCRIPT          SCRIPT-->
