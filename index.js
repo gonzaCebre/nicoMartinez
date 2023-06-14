@@ -1,17 +1,3 @@
-//      LOAD BOOK
-const loadBookData = async () => {
-  try {
-    let response = await fetch("book.json");
-    let data = await response.json();
-    console.log(data);
-    return data;
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-/* loadBookData(); */
-
 //      LOAD OBRAS
 const loadObrasData = async () => {
   try {

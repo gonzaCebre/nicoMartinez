@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio actoral de Nicolas Martinez" />
+    <meta property="og:title" content="Nicolas Martinez - Portfolio" />
+    <meta property="og:image" content="./media/portadas/og-image.jpg" />
+    <meta property="og:url" content="https://www.elnicomartinez.com.ar" />
+    <meta
+      property="og:description"
+      content="Portfolio web actoral de Nicolas Martinez. Contiene su trayectoria, book de fotos, obras en las que ha participado, links de contacto..."
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -34,7 +42,7 @@
         <a href="#contacto" class="button">Contacto</a>
       </div>
     </section>
-    <section class="index--desktop" id="index--desktop">
+    <section class="index--desktop" id="indexDesktop">
       <img
         src="./media/portadas/foto-index--desktop.jpg"
         alt="Foto Nico Martinez"
@@ -52,10 +60,10 @@
           <li>Docente de teatro</li>
         </ul>
         <div class="index__buttons">
-          <a href="#quienSoy" class="button">¿Quién soy?</a>
+          <a href="#quienSoyDesktop" class="button">¿Quién soy?</a>
           <a href="#reels" class="button">Reels</a>
           <a href="#galeria" class="button">Galeria</a>
-          <a href="#contacto" class="button">Contacto</a>
+          <a href="#contactoDesktop" class="button">Contacto</a>
         </div>
       </div>
     </section>
@@ -181,13 +189,12 @@
     </section>
     <section class="contacto" id="contacto">
       <h2>CONTACTO</h2>
-      <div class="no-mostrar" id="contactoTexto">
-        Comunicate conmigo si te interesó mi perfil y tenés alguna propuesta
-        artística, o la creamos juntos. ¡Saludos!
-      </div>
 
       <div class="contacto__buttons">
-        <a href="" target="_blank" class="contacto__button whatsapp"
+        <a
+          href="https://api.whatsapp.com/send?phone=3515382719"
+          target="_blank"
+          class="contacto__button whatsapp"
           ><svg name="whatsapp" viewBox="0 0 553 545">
             <g id="whatsapp" class="logo-contacto">
               <path
@@ -233,7 +240,9 @@
             </g>
           </svg>
         </a>
-        <a href="" class="contacto__button instagram"
+        <a
+          href="https://www.instagram.com/elnicomartinez.ok/"
+          class="contacto__button instagram"
           ><svg name="instagram" viewBox="0 0 553 545">
             <g class="logo-contacto">
               <path
@@ -346,7 +355,9 @@
             </g>
           </svg>
         </a>
-        <a href="" class="contacto__button youtube"
+        <a
+          href="https://www.youtube.com/@elnicomartinez"
+          class="contacto__button youtube"
           ><svg name="youtube" viewBox="0 0 553 545">
             <g class="logo-contacto">
               <path
@@ -390,11 +401,18 @@
       </div>
 
       <div class="contacto--desktop__buttons">
-        <a href="" target="_blank" class="contacto__button whatsapp--desktop">
+        <a
+          href="https://api.whatsapp.com/send?phone=3515382719"
+          target="_blank"
+          class="contacto__button whatsapp--desktop"
+        >
           <p>Hablame por</p>
           <img src="./media/logos/whatsapp-logo-blanco.png" alt="" />
         </a>
-        <a href="" class="contacto__button instagram--desktop">
+        <a
+          href="https://www.instagram.com/elnicomartinez.ok/"
+          class="contacto__button instagram--desktop"
+        >
           <p>Seguime en</p>
           <img src="./media/logos/ig-logo-blanco.png" alt="" />
         </a>
@@ -402,7 +420,10 @@
           <p>Mandame un</p>
           <img src="./media/logos/email-blanco.png" alt="" />
         </a>
-        <a href="" class="contacto__button youtube--desktop">
+        <a
+          href="https://www.youtube.com/@elnicomartinez"
+          class="contacto__button youtube--desktop"
+        >
           <p>Seguime en</p>
           <img src="./media/logos/youtube-blanco.png" alt="" />
         </a>
@@ -1849,8 +1870,7 @@
       <!-- <div class="book__fotos" id="bookFotosContainer"></div> -->
       <button id="cargarBook" class="no-mostrar">Cargar más</button>
     </section>
-    <!--     <section class="foto--abierta no-mostrar" id="fotoAbierta"></section>
- -->
+
     <section class="obras no-mostrar" id="obrasModal">
       <button class="cerrar" id="cerrarObrasModal">X</button>
       <h2>OBRAS</h2>
@@ -1861,16 +1881,6 @@
     </section>
 
     <section class="obra--abierta no-mostrar" id="obraAbierta"></section>
-    <!-- 
-    <a href="#index" class="up" id="up">
-      <svg viewBox="0 0 359.3 360.01">
-        <path
-          d="M385.12,198.92c1.78,99.59-76.86,181.55-175.78,183.62A179.25,179.25,0,0,1,25.88,206.42C24,105.76,103.54,23.67,202.83,22.58A179.91,179.91,0,0,1,385.12,198.92ZM205.44,177.2c2,2.2,3.56,4,5.13,5.72q22.5,25.35,45,50.7c5.32,6,12.56,6.65,17.83,1.85s5.28-11.87.13-17.69q-28.9-32.67-57.9-65.28c-6.48-7.29-13.89-7.22-20.43.09q-12,13.41-23.86,26.89c-11.52,13-23.09,25.91-34.51,39-6.35,7.25-2.83,18,6.4,19.88,4.85,1,8.76-.87,12-4.51q13.38-15.16,26.83-30.26C189.72,194.89,197.42,186.23,205.44,177.2Z"
-          transform="translate(-25.85 -22.57)"
-          fill="#fe3232"
-        />
-      </svg>
-    </a> -->
 
     <footer>
       Sitio web diseñado y desarrollado por
